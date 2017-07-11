@@ -2,43 +2,7 @@
 <html>
 
 <head>
-  <script src="./src/sigma.core.js"></script>
-<script src="./src/conrad.js"></script>
-<script src="./src/utils/sigma.utils.js"></script>
-<script src="./src/utils/sigma.polyfills.js"></script>
-<script src="./src/sigma.settings.js"></script>
-<script src="./src/classes/sigma.classes.dispatcher.js"></script>
-<script src="./src/classes/sigma.classes.configurable.js"></script>
-<script src="./src/classes/sigma.classes.graph.js"></script>
-<script src="./src/classes/sigma.classes.camera.js"></script>
-<script src="./src/classes/sigma.classes.quad.js"></script>
-<script src="./src/classes/sigma.classes.edgequad.js"></script>
-<script src="./src/captors/sigma.captors.mouse.js"></script>
-<script src="./src/captors/sigma.captors.touch.js"></script>
-<script src="./src/renderers/sigma.renderers.canvas.js"></script>
-<script src="./src/renderers/canvas/sigma.canvas.labels.def.js"></script>
-<script src="./src/renderers/canvas/sigma.canvas.hovers.def.js"></script>
-<script src="./src/renderers/canvas/sigma.canvas.nodes.def.js"></script>
-<script src="./src/renderers/canvas/sigma.canvas.edges.def.js"></script>
-<script src="./src/renderers/canvas/sigma.canvas.edges.curve.js"></script>
-<script src="./src/renderers/canvas/sigma.canvas.edges.arrow.js"></script>
-<script src="./src/renderers/canvas/sigma.canvas.edges.curvedArrow.js"></script>
-<script src="./src/renderers/canvas/sigma.canvas.edgehovers.def.js"></script>
-<script src="./src/renderers/canvas/sigma.canvas.edgehovers.curve.js"></script>
-<script src="./src/renderers/canvas/sigma.canvas.edgehovers.arrow.js"></script>
-<script src="./src/renderers/canvas/sigma.canvas.edgehovers.curvedArrow.js"></script>
-<script src="./src/renderers/canvas/sigma.canvas.extremities.def.js"></script>
-<script src="./src/middlewares/sigma.middlewares.rescale.js"></script>
-<script src="./src/middlewares/sigma.middlewares.copy.js"></script>
-<script src="./src/misc/sigma.misc.animation.js"></script>
-<script src="./src/misc/sigma.misc.bindEvents.js"></script>
-<script src="./src/misc/sigma.misc.bindDOMEvents.js"></script>
-<script src="./src/misc/sigma.misc.drawHovers.js"></script>
-<!-- END SIGM. IMPORTS -->
-<script src="./plugins/sigma.renderers.edgeLabels/settings.js"></script>
-<script src="./plugins/sigma.renderers.edgeLabels/sigma.canvas.edges.labels.def.js"></script>
-<script src="./plugins/sigma.renderers.edgeLabels/sigma.canvas.edges.labels.curve.js"></script>
-<script src="./plugins/sigma.renderers.edgeLabels/sigma.canvas.edges.labels.curvedArrow.js"></script>
+
 <div id="container">
   <style>
     #graph {
@@ -55,7 +19,7 @@
   <script src="node_modules/systemjs/dist/system.js"></script>
   <script src="node_modules/sweetalert/dist/sweetalert.min.js"></script>
   <link rel="stylesheet" type="text/css" href="node_modules/sweetalert/dist/sweetalert.css">
-  <title>Hello World!</title>
+  <title>Tracemap - Projeto de Redes II (2017.1), prof. Célio</title>
 </head>
 
 <body>
@@ -65,9 +29,10 @@
       <div id="sidebar" class="col-4 dark-bg sidebar">
         <div class="logo mar-t10">
           <img src="./assets/img/logo.svg" alt="">
+          <p class="author">Developed by Romulo Mourão</p>
         </div>
 
-        <div class="search-bar mar-b50 mar-t10 ">
+        <div class="search-bar mar-b50 mar-t20 ">
           <input placeholder='Ex. google.com ou 8.8.8.8' type='text' id="src-bar">
 
         </div>

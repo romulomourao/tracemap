@@ -131,6 +131,9 @@
 .mar-t10{
     margin-top: 10px;
 }
+.mar-t20{
+    margin-top: 20px;
+}
 
 .sidebar {
     border-right: 5px solid #2a2a2a;
@@ -265,4 +268,10 @@
     font-size: 0.7em;
     color: #636363;
     text-align: right;
+}
+
+.author{
+    color: #636363;
+    font-style: italic;
+    font-size: 0.6em;
 }
