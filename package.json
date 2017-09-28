@@ -18,6 +18,7 @@
     "electron-packager": "^8.7.2"
   },
   "dependencies": {
+    "electron-settings": "^3.1.2",
     "jquery": "^3.2.1",
     "leveldown": "^1.6.0",
     "linvodb3": "^3.25.0",

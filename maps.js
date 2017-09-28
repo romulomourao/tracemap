@@ -92,7 +92,10 @@ function setPath() {
 
 function setCenter(center) {
   map.setCenter(center);
-  map.setZoom(6);
+
+  if ($(navigation.menu.constants.resetZoom.id).prop('checked')) {
+    map.setZoom(6);
+  }
 }
 
 function initMap() {
