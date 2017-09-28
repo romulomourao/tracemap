@@ -47,7 +47,7 @@ function setInfo(data) {
       title: `${data.query}`,
       text: `ISP: <span style="color:#00bc64">${data.isp} - ${data.as}</span></br>
           Local: <span style="color:#00bc64">${data.city}, ${data.region} - ${data.country}</span></br>
-          Lat/Lon: <span style="color:#00bc64">${data.lat},${data.lon}</span> 
+          Lat/Lon: <span style="color:#00bc64">${data.lat},${data.lon}</span>
               `,
       confirmButtonText: 'FECHAR',
       confirmButtonColor: '#00bc64',

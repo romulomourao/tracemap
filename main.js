@@ -15,8 +15,8 @@ let mainWindow
 function createWindow () {
 
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 1024, 
-    height: 720, 
+  mainWindow = new BrowserWindow({width: 1024,
+    height: 720,
     resizable: false,
     backgroundColor: '#333',
     title: 'Tracemap',
