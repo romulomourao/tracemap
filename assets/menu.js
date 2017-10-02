@@ -1,3 +1,5 @@
+const settings = require('electron-settings');
+
 window.navigation = window.navigation || {},
 function(n) {
     navigation.menu = {
@@ -5,7 +7,11 @@ function(n) {
         sectionTemplate: '.section-template',
         contentContainer: '#map',
         startSectionMenuItem: '#welcome-menu',
-        startSection: '#graph-container'
+        startSection: '#graph-container',
+        resetZoom: {
+          id: '#reset-zoom',
+          settingName: 'map.reset_zoom'
+        }
       },
 
       importSectionsToDOM: function() {
@@ -38,6 +44,19 @@ function(n) {
         $(this.constants.startSection + ' section').show()
       },
 
+      loadSettings: function() {
+        const resetZoomSettingName = this.constants.resetZoom.settingName
+
+        resetZoom = settings.get(resetZoomSettingName, true)
+
+        const resetZoomCheckbox = $(this.constants.resetZoom.id)
+
+        resetZoomCheckbox.prop('checked', resetZoom)
+        resetZoomCheckbox.change(function() {
+          settings.set(resetZoomSettingName, resetZoomCheckbox.prop('checked'))
+        })
+      },
+
       hideAllSections: function() {
         $(this.constants.contentContainer + ' section').hide()
       },
@@ -46,6 +65,7 @@ function(n) {
         this.importSectionsToDOM()
         this.setMenuOnClickEvent()
         this.showStartSection()
+        this.loadSettings()
       }
     };
 
