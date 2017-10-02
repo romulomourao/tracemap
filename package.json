@@ -10,6 +10,10 @@
   "build": {
     "appId": "com.tracemap.app"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/romulomourao/tracemap"
+  },
   "author": "Romulo Mourão",
   "license": "MIT",
   "devDependencies": {
