@@ -12,8 +12,6 @@ let ipArray;
 let domain;
 var s;
 
-
-
 window.onkeypress = function (e) {
     ipArray = [];
     domain = $('#src-bar').val();
@@ -59,9 +57,7 @@ window.onkeypress = function (e) {
                 .catch(erro => console.error(erro));
         });
 
-
     }
-
 
 };
 
@@ -70,19 +66,17 @@ function removeLoader() {
 }
 
 function showSearchedDomain(domain) {
-    $(".domain-loader").append(`<span id="domain" class="domain mar-t10 mar-b10">${domain}</span>`);
+    $(".domain-loader").append(`<span id="domain" class="domain">${domain}</span>`);
 }
 
 function prepareSidebar() {
     $("#ip").remove();
+    $(".domain-loader .domain").remove();
     $('#src-bar').val("");
-    $("#sidebar").append(`<div id="ip"></div>`);
-    $("#ip").append(
-        `<div class="domain-loader">
-             <div id="loader" class="loader"></div>
-        </div>`
+    $("#sidebar").append(`<ol id="ip" class="trace-list"></ol>`);
+    $(".domain-loader").append(
+        `<div id="loader" class="loader"></div>`
     ).hide().fadeIn(400);
-
 }
 
 function appendInfos(resultados) {
@@ -92,13 +86,6 @@ function appendInfos(resultados) {
         if (data.status === "success") {
             Api.appendResponse(data, index, time);
             ipArray.push(data.query);
-
         }
     });
 }
-
-
-
-
-
-

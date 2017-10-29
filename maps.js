@@ -22,9 +22,7 @@ function clearPath(map){
 // Removes the markers from the map, but keeps them in the array.
 function clearMarkers() {
   setMapOnAll(null);
-
 }
-
 
 // Deletes all markers
 function deleteMarkersAndPath() {
@@ -41,7 +39,6 @@ function addPoint(point) {
 
 //set alert box for each marker
 function setInfo(data) {
-
   marker.addListener('click', function () {
     swal({
       title: `${data.query}`,
@@ -52,16 +49,12 @@ function setInfo(data) {
       confirmButtonText: 'FECHAR',
       confirmButtonColor: '#00bc64',
       html: true,
-
     });
-
 
   });
 }
 
 function setMarkers(data) {
-
-
   marker = new google.maps.Marker({
     position: {
       lat: data.lat,
@@ -73,12 +66,9 @@ function setMarkers(data) {
   markers.push(marker);
   marker.setMap(map);
   setInfo(data);
-
-
 }
 
 function setPath() {
-
   routes = new google.maps.Polyline({
     path: coords,
     strokeColor: '#00bc64',
@@ -86,8 +76,6 @@ function setPath() {
     strokeWeight: 2,
   });
   routes.setMap(map);
-
-
 }
 
 function setCenter(center) {
@@ -104,8 +92,6 @@ function initMap() {
     disableDefaultUI: true,
     zoom: 2,
     styles: mapStyle
-
   });
-
 
 }
