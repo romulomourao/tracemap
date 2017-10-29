@@ -71,6 +71,7 @@ function showSearchedDomain(domain) {
 
 function prepareSidebar() {
     $("#ip").remove();
+    $(".domain-loader .loader").remove();
     $(".domain-loader .domain").remove();
     $('#src-bar').val("");
     $("#sidebar").append(`<ol id="ip" class="trace-list"></ol>`);
