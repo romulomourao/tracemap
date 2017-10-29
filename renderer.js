@@ -73,7 +73,6 @@ function prepareSidebar() {
     $("#ip").remove();
     $(".domain-loader .loader").remove();
     $(".domain-loader .domain").remove();
-    $('#src-bar').val("");
     $("#sidebar").append(`<ol id="ip" class="trace-list"></ol>`);
     $(".domain-loader").append(
         `<div id="loader" class="loader"></div>`
@@ -89,4 +88,5 @@ function appendInfos(resultados) {
             ipArray.push(data.query);
         }
     });
+    $('#src-bar').val("");
 }
