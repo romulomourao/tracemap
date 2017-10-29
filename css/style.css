@@ -182,4 +182,4 @@
 }
 
 #map {height: 100vh;}
-#map > div {background-color: #2B2B2B !important;}
+#map > div {background-color: #2B2B2B !important; /*Used to overwrite Google Maps background-color in map canvas */}
