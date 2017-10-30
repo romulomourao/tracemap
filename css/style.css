@@ -117,7 +117,7 @@
 /*////////////////////////////////////////////////////////////////////////////*/
 .trace-list {
     height: calc(100vh - 270px);
-    padding-left: 20px;
+    list-style: none;
     overflow-y: scroll;
 }
 
