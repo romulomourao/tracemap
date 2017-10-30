@@ -40,7 +40,7 @@
 
 .logo img {width: 80%;}
 
-.logo .author{
+.logo .author {
     color: #636363;
     font-style: italic;
     font-size: 0.6em;
@@ -126,7 +126,7 @@
     background-color: #333;
 }
 
-.trace-list::-webkit-scrollbar-track{background-color: #333;}
+.trace-list::-webkit-scrollbar-track {background-color: #333;}
 .trace-list::-webkit-scrollbar-thumb {background-color: #00bc64;}
 
 /*////////////////////////////////////////////////////////////////////////////*/
@@ -161,7 +161,7 @@
     text-align: right;
 }
 
-.box .whois{
+.box .whois {
     margin-top: 5px;
     font-style: italic;
 }
