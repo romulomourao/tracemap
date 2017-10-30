@@ -1,66 +1,44 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0" />
+    <title>Tracemap - Projeto de Redes II (2017.1), prof. Célio</title>
 
-<head>
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="node_modules/sweetalert/dist/sweetalert.css" />
+  </head>
 
-<div id="container">
-  <style>
-    #graph {
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      position: absolute;
-    }
-  </style>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <script src="node_modules/systemjs/dist/system.js"></script>
-  <script src="node_modules/sweetalert/dist/sweetalert.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="node_modules/sweetalert/dist/sweetalert.css">
-  <title>Tracemap - Projeto de Redes II (2017.1), prof. Célio</title>
-</head>
+  <body>
+    <div id="sidebar" class="sidebar">
+      <div class="logo">
+        <img src="./assets/img/logo.svg" alt="Tracemap logo">
+        <p class="author">Developed by Romulo Mourão</p>
+      </div><!-- End .logo -->
+      <div class="searchbar">
+        <input id="src-bar" placeholder='Ex. google.com ou 8.8.8.8' type='text' />
+      </div><!-- End .searchbar -->
+      <div class="domain-loader"></div>
+    </div><!-- End .sidebar -->
 
-<body>
+    <div class="trace-map">
+      <div id="map"></div>
+    </div><!-- End .trace-map -->
 
-  <div class="container">
-    <div class="row">
-      <div id="sidebar" class="col-4 dark-bg sidebar">
-        <div class="logo mar-t10">
-          <img src="./assets/img/logo.svg" alt="">
-          <p class="author">Developed by Romulo Mourão</p>
-        </div>
-
-        <div class="search-bar mar-b50 mar-t20 ">
-          <input placeholder='Ex. google.com ou 8.8.8.8' type='text' id="src-bar">
-
-        </div>
-
-      </div>
-      <div class="col-8 dark-bg">
-        <div id="map"></div>
-      </div>
-    </div>
-  </div>
-
-
-</body>
-
-<script>
-  // You can also require other files to run in this process
-
-  require('./renderer.js')
-  require('./api.js')
-
-
-</script>
- <script>window.$ = window.jQuery = require('./assets/jquery.min.js');</script>
-<script src="./map-style.js"></script>
-<script src="./maps.js"></script>
-<script src="./assets/menu.js"></script>
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRBrERHcgbxaFUhnI8LWWa70b084Bnaq8&callback=initMap" async
-  defer></script>
-
+    <!-- Scripts -->
+    <script src="node_modules/systemjs/dist/system.js"></script>
+    <script src="node_modules/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+      // You can also require other files to run in this process
+      require('./renderer.js')
+      require('./api.js')
+    </script>
+    <script>window.$ = window.jQuery = require('./assets/jquery.min.js');</script>
+    <script src="./map-style.js"></script>
+    <script src="./maps.js"></script>
+    <script src="./assets/menu.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRBrERHcgbxaFUhnI8LWWa70b084Bnaq8&callback=initMap" ></script>
+  
+  </body>
 </html>

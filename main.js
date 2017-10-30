@@ -11,13 +11,15 @@ const url = require('url')
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
 
-
 function createWindow () {
 
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 1024, 
-    height: 720, 
-    resizable: false,
+  mainWindow = new BrowserWindow({ 
+    width: 1024,
+    height: 720,
+    minWidth: 1000,
+    minHeight: 720, 
+    resizable: true,
     backgroundColor: '#333',
     title: 'Tracemap',
     icon: path.join(__dirname, 'assets/icons/png/512x512.png'),
