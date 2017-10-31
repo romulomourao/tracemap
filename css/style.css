@@ -99,17 +99,11 @@
     border-top: 8px solid #00bc64;
     margin: 0;
     animation: spin 2s linear infinite;
-    -webkit-animation: spin 2s linear infinite;
 }
 
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-}
-
-@-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
 }
 
 /*////////////////////////////////////////////////////////////////////////////*/
