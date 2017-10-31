@@ -11,11 +11,11 @@
 }
 
 ::-webkit-input-placeholder { 
-  /* Chrome/Opera/Safari */
-  color: #636363;
-  font-weight: 100;
-  font-style: italic;
-  font-size: .9rem;
+    /* Chrome/Opera/Safari */
+    color: #636363;
+    font-weight: 100;
+    font-style: italic;
+    font-size: .9rem;
 }
 
 /*////////////////////////////////////////////////////////////////////////////*/
@@ -72,7 +72,7 @@
 /*////////////////////////////////////////////////////////////////////////////*/
 .domain-loader {
     width: 90%;
-    margin: 0 auto 20px auto;
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -91,25 +91,19 @@
 /* .loader */
 /*////////////////////////////////////////////////////////////////////////////*/
 .loader {
-  border: 8px solid #484848;
-  border-radius: 50%;
-  border-top: 8px solid #00bc64;
-  width: 60px;
-  height: 60px;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
-  margin: 0 auto;
-  margin-top: 100px;
-}
-
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border: 8px solid #484848;
+    border-radius: 50%;
+    border-top: 8px solid #00bc64;
+    margin: 0;
+    animation: spin 2s linear infinite;
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 /*////////////////////////////////////////////////////////////////////////////*/
