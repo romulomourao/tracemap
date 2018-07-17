@@ -17,7 +17,7 @@
   "author": "Romulo Mourão",
   "license": "MIT",
   "devDependencies": {
-    "electron": "~1.6.2",
+    "electron": "~1.8.2-beta5",
     "electron-builder": "^19.13.0",
     "electron-packager": "^8.7.2"
   },
