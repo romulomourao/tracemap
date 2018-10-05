@@ -4,10 +4,7 @@
 
 Clone the project and run:
 
-```bash
-$ npm install
-$ npm start
-```
+`npm install` then `npm start`
 
 ## Screenshots
 
