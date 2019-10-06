@@ -1,5 +1,11 @@
 # Tracemap
 
+## Dependencies
+
+You need to install `traceroute ` before.
+
+`sudo apt-get install traceroute`
+
 ## Building
 
 Clone the project and run:
