@@ -1,11 +1,11 @@
 var map;
 const marker_icon = './assets/img/marker.png';
 const marker_hover_icon = './assets/img/marker_hover.png';
-var coords = [];
-var marker;
-var routes;
-var paths = [];
-var markers = [];
+let coords = [];
+let marker;
+let routes;
+let paths = [];
+let markers = [];
 
 // Sets the map on all markers in the array.
 function setMapOnAll(map) {
