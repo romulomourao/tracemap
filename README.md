@@ -10,7 +10,7 @@ You need to install `traceroute ` before.
 
 Clone the project and run:
 
-`npm install` then `npm start`
+`yarn install` then `yarn start`
 
 ## Screenshots
 
