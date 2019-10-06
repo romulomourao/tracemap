@@ -138,6 +138,8 @@
 
 .box:hover {background-color: #444;}
 
+.box-hover {background-color: #444;}
+
 .box .ip {
     padding-right: 65px;
     color: #00bc66;
