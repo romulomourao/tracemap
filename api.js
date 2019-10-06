@@ -1,5 +1,4 @@
 const $ = require("jquery");
-let map = require("./maps.js");
 
 let Api = module.exports = {
   getGeolocation: (ip) => {
@@ -23,7 +22,6 @@ let Api = module.exports = {
   appendResponse: (data, idx, time) => {
     addPoint({lat: data.lat, lng: data.lon});
     let ip = data.query.split(".").join("");
-    console.log("TEMPO",time[idx]);
     $("#ip").append(
       `<li id="ip-${ip}" class="box">
           <p class="ip">${data.query}</p>

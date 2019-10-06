@@ -5,12 +5,10 @@
 const Traceroute = require('traceroute');
 const $ = require("jquery");
 let Api = require("./api.js");
-let infos = [];
 let ips;
 var time;
 let ipArray;
 let domain;
-var s;
 
 window.onkeypress = function (e) {
     ipArray = [];
@@ -24,13 +22,11 @@ window.onkeypress = function (e) {
             if (err) {
                 throw err;
             }
-            console.log(hops);
             ips = hops
                 .filter((item) => {
                     if (item) return item;
                 })
                 .map((item) => {
-                    console.log( Object.keys(item)[0]);
                     return Object.keys(item)[0];
                 });
 
@@ -42,7 +38,6 @@ window.onkeypress = function (e) {
                    return item[Object.keys(item)[0]];
                 });
              
-                console.log(time);
             const requisicoes = ips.map(ip => Api.getGeolocation(ip));
 
             Promise
@@ -81,8 +76,6 @@ function prepareSidebar() {
 
 function appendInfos(resultados) {
     resultados.forEach((data, index) => {
-        console.log("index", index);
-        console.log(data.status);
         if (data.status === "success") {
             Api.appendResponse(data, index, time);
             ipArray.push(data.query);
