@@ -71,8 +71,8 @@ function setMarkers(data) {
 }
 
 function setHoverEvents(data) {
-  var box_id = `ip-${data.query.split(".").join("")}`;
-  var box = $(`#${box_id}`)
+  const box_id = `ip-${data.query.split(".").join("")}`;
+  const box = $(`#${box_id}`)
   marker.addListener('mouseover', function() {
     box.addClass('box-hover');
     this.setIcon(marker_hover_icon);
