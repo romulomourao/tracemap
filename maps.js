@@ -1,5 +1,6 @@
 var map;
-const image = './assets/img/marker.png';
+const marker_icon = './assets/img/marker.png';
+const marker_hover_icon = './assets/img/marker_hover.png';
 var coords = [];
 var marker;
 var routes;
@@ -61,11 +62,25 @@ function setMarkers(data) {
       lng: data.lon
     },
     map: map,
-    icon: image
+    icon: marker_icon
   });
   markers.push(marker);
   marker.setMap(map);
+  setHoverEvents(data);
   setInfo(data);
+}
+
+function setHoverEvents(data) {
+  const box_id = `ip-${data.query.split(".").join("")}`;
+  const box = $(`#${box_id}`)
+  marker.addListener('mouseover', function() {
+    box.addClass('box-hover');
+    this.setIcon(marker_hover_icon);
+  });
+  marker.addListener('mouseout', function() {
+    box.removeClass('box-hover');
+    this.setIcon(marker_icon);
+  });
 }
 
 function setPath() {
