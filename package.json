@@ -22,7 +22,7 @@
     "electron-packager": "^8.7.2"
   },
   "dependencies": {
-    "jquery": "^3.2.1",
+    "jquery": "^3.5.0",
     "linvodb3": "^3.25.0",
     "nedb": "^1.8.0",
     "sweetalert": "^1.1.3",
